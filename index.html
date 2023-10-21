@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<body>
+  <table id="grid">
+  </table>
+</body>
+
+<!--
+  Build the row
+  Append the row
+
+  For row in board
+    rowelem = make row
+    For elem in row
+      rowelem.append(elem)
+
+-->
+
+<script>
+  var e = "e"
+  var board = [[e, e, e, e, e, e, e], [e, e, e, e, e, e, e], [e, e, e, e, e, e, e], [e, e, e, e, e, e, e], [e, e, e, e, e, e, e], [e, e, e, e, e, e, e],]
+
+
+  const grid = document.getElementById("grid");
+
+  board.forEach((row) => {
+    let rowelem = document.createElement("tr");
+    row.forEach((elem) => {
+      let data = document.createElement("td");
+      data.innerText = elem;
+      rowelem.appendChild(data);
+    })
+    grid.appendChild(rowelem);
+  })
+</script>
