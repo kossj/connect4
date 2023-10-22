@@ -54,6 +54,7 @@
     for (var row of rev) {
       if (row[col] == e) {
         row[col] = d;
+        drawBoard(rev.reverse());
         return rev.reverse();
       }
     }
